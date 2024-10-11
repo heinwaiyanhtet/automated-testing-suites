@@ -3,6 +3,60 @@ import sum from './sum';
 
 // Common Matcher
 
+    
+
+
+
+test('the shopping list has milk on it', () => {  
+
+
+    const shoppingList = 
+    [
+        'diapers',
+        'kleenex',
+        'trash bags',
+        'paper towels',
+        'milk',
+    ]
+
+    expect(shoppingList).toContain('milk');
+    expect(new Set(shoppingList)).toContain('milk');
+
+});
+
+
+
+test('there is no I in team', () => {
+    expect('team').not.toMatch(/I/);
+});
+  
+test('but there is a "stop" in Christoph', () => {
+expect('Christoph').toMatch(/stop/);
+});
+
+
+test('adding floating point numbers',() => {
+    
+    const value = 0.1 + 0.3;
+
+    expect(value).toBeCloseTo(0.4);
+
+})
+
+test('two plus two', () => {  
+
+    const value = 2 + 2;
+
+    expect(value).toBeGreaterThan(3);   
+    expect(value).toBeGreaterThanOrEqual(3.5);
+    expect(value).toBeLessThan(5);
+    expect(value).toBeLessThanOrEqual(4.5);
+    expect(value).toBe(4);
+    expect(value).toEqual(4);
+    
+
+})
+
 test('zero',() => {
 
     const z = 0;
@@ -13,6 +67,7 @@ test('zero',() => {
     expect(z).toBeFalsy();
 
 })
+
 
 test('null', () => 
 {
